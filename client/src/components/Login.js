@@ -15,7 +15,7 @@ const Login = ({history}) => {
   };
 
   // make a post request to retrieve a token from the api
-const login = e => {
+const handleSubmit = e => {
   e.preventDefault();
   axios
     .post("http://localhost:5000/api/login", credentials)
@@ -34,7 +34,7 @@ const login = e => {
       <h1>Welcome to the Bubble App!</h1>
       <p>Please Login</p>
 
-      <form onSubmit={login}>
+      <form onSubmit={handleSubmit}>
         <input 
           placeholder="Username"
           type="text"
@@ -46,7 +46,7 @@ const login = e => {
           placeholder="Password"
           type="text"
           name="password"
-          value={credentials.username}
+          value={credentials.password}
           onChange={handleChanges}
         />
         <button>Log In</button>
