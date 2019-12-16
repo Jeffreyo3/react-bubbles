@@ -7,6 +7,8 @@ import Login from "./components/Login";
 import "./styles.scss";
 
 function App() {
+  // const [colorList, setColorList] = React.useState([]);
+
   return (
     <Router>
       <div className="App">
